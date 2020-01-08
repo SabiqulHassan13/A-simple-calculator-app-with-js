@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+   	<!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Calculator App 1</title>
+
+  </head>
+  <body>
+
+	<!-- <p>This is a calculator</p> -->
+
+	<!-- Calculator App Start -->
+
+	<div class="calculator mt-md-5 mb-md-5">
+		<div class="container calculator-body">
+			<div class="card">
+				<div class="card-header model-name">
+					<h6>Calculator Model - 111Sc</h6>
+				</div>
+				<div class="card-body">
+					<form action="" name="form">
+
+						<!-- Calculator Result Bar -->
+						<div class="card-title result-tab">
+							<input type="text" name="display" value="" class="form-control result-bar" placeholder="0">
+						</div>
+						<hr class="bg-warning">
+
+						<!-- Calculator Button Pad -->
+						<div class="card-text button-area">
+							<div class="button-row">
+								<input type="text" name="btn" value="AC" class="btn btn-danger" onclick="display.value = null">
+								<input type="text" name="btn" value="DEL" class="btn btn-danger" onclick="display.value = eval(display.value.slice(0, -1))">
+								<!-- <input type="text" name="btn" value="log(x)" class="btn btn-info" onclick="display.value = eval(Math.log(display.value))">
+								<input type="text" name="btn" value="exp(x)" class="btn btn-info" onclick="display.value = eval(Math.exp(display.value))"> -->
+								<input type="text" name="btn" value="MS" class="btn btn-danger" onclick="storeValueInMemory(display.value)">
+								<input type="text" name="btn" value="MR" class="btn btn-danger" onclick="display.value = displayMemoryValue()">
+							</div>
+
+							<div class="button-row">
+								<input type="text" name="btn" value="sqrt(x)" class="btn btn-info" onclick="display.value = eval(Math.sqrt(display.value))">
+								<input type="text" name="btn" value="x^2" class="btn btn-info" onclick="display.value = eval(Math.pow(display.value, 2))">
+								<input type="text" name="btn" value="1/x" class="btn btn-info" onclick="display.value = eval(1.00 / display.value)">
+								<input type="text" name="btn" value="/" class="btn btn-info" onclick="calculate(this.value)">
+							</div>
+
+							<div class="button-row">
+								<input type="text" name="btn" value="7" class="btn btn-secondary" onclick="calculate(this.value)">
+								<input type="text" name="btn" value="8" class="btn btn-secondary" onclick="calculate(this.value)">
+								<input type="text" name="btn" value="9" class="btn btn-secondary" onclick="calculate(this.value)">
+								<input type="text" name="btn" value="*" class="btn btn-info" onclick="calculate(this.value)">
+							</div>
+
+							<div class="button-row">
+								<input type="text" name="btn" value="4" class="btn btn-secondary" onclick="calculate(this.value)">
+								<input type="text" name="btn" value="5" class="btn btn-secondary" onclick="calculate(this.value)">			  <input type="text" name="btn" value="6" class="btn btn-secondary" onclick="calculate(this.value)">
+								<input type="text" name="btn" value="-" class="btn btn-info" onclick="calculate(this.value)">
+							</div>
+
+							<div class="button-row">
+								<input type="text" name="btn" value="1" class="btn btn-secondary" onclick="calculate(this.value)">
+								<input type="text" name="btn" value="2" class="btn btn-secondary" onclick="calculate(this.value)">
+								<input type="text" name="btn" value="3" class="btn btn-secondary" onclick="calculate(this.value)">
+								<input type="text" name="btn" value="+" class="btn btn-info" onclick="calculate(this.value)">
+							</div>
+
+							<div class="button-row">
+								<input type="text" name="btn" value="-/+" class="btn btn-secondary" onclick="display.value = eval(display.value * (-1))">
+								<input type="text" name="btn" value="0" class="btn btn-secondary" onclick="calculate(this.value)">
+								<input type="text" name="btn" value="." class="btn btn-secondary" onclick="calculate(this.value)">
+								<input type="text" name="btn" value="=" class="btn btn-success" onclick="display.value = eval(display.value)">
+							</div>											
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Calculator App End -->
+    
+
+
+
+
+
+
+	
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
