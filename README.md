@@ -1,5 +1,5 @@
 # A-simple-calculator-app-with-js
- a basic calculator made by using html, css, bs4 and js
+ a basic calculator made by using html, css, bs4 (version 4.3.1) and js
  
  
 **Features of this calculator app**
